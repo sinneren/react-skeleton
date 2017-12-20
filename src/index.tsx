@@ -7,21 +7,21 @@ import App from "./components/App";
 const root = document.getElementById("root");
 
 ReactDOM.render(
-	<AppContainer>
-		<App />
-	</AppContainer>,
-	root
+  <AppContainer>
+    <App />
+  </AppContainer>,
+  root,
 );
 
 if (module.hot) {
-	module.hot.accept("./components/App", () => {
-		const newApp = require('./components/App').default;
+  module.hot.accept("./components/App", () => {
+    const newApp = require("./components/App").default;
 
-		ReactDOM.render(
-			<AppContainer>
-				<App />
-			</AppContainer>,
-			root
-		);
-	});
+    ReactDOM.render(
+      <AppContainer>
+        <App />
+      </AppContainer>,
+      root,
+    );
+  });
 }

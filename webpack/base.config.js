@@ -23,9 +23,14 @@ module.exports = {
 	// the loaders
 	module: {
 		rules: [
+      {
+        test: /\.tsx?$/,
+        loader: "tslint-loader",
+        enforce: "pre",
+      },
 			{
 				test: /\.tsx?$/,
-				loader: ["react-hot-loader/webpack", "awesome-typescript-loader"],
+				loaders: ["react-hot-loader/webpack", "awesome-typescript-loader"],
 				exclude: ["/node_modules/"]
 			},
 			{
