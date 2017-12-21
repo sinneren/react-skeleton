@@ -4,6 +4,8 @@ import { AppContainer } from "react-hot-loader";
 
 import App from "./components/App";
 
+require("./assets/scss/styles.scss");
+
 const root = document.getElementById("root");
 
 ReactDOM.render(
