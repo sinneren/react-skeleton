@@ -2,8 +2,10 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 
+// APP WRAPPER
 import App from "./components/App";
 
+// GLOBAL STYLES
 require("./assets/scss/styles.scss");
 
 const root = document.getElementById("root");
