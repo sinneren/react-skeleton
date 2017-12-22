@@ -1,15 +1,25 @@
 import * as React from "react";
+import { connect } from "react-redux";
 
 const styles = require("./App.scss");
 
-class App extends React.Component {
+interface IProps {
+  // container props
+  appTitle: string;
+}
+
+class App extends React.Component<IProps, any> {
   public render() {
     return (
       <div className={styles.appContainer}>
-        <p>React + Typescript + HMR</p>
+        <p>{this.props.appTitle}</p>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state: IStore) => ({
+  appTitle: state.appState.appTitle,
+});
+
+export const RootComponent = connect(mapStateToProps, null)(App);
