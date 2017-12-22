@@ -2,7 +2,6 @@
   "name": "react-typescript-hmr-boilerplate",
   "version": "1.0.0",
   "description": "A simple React 16 Boilerplate with Typescript and HMR",
-  "main": "index.js",
   "author": "Rico Maier <contact@bitmonk.de>",
   "license": "MIT",
   "scripts": {
@@ -12,8 +11,10 @@
   "dependencies": {
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6"
   },
   "devDependencies": {
     "@types/react-hot-loader": "^3.0.5",
