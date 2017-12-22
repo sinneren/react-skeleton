@@ -27,9 +27,9 @@ const render = (Component: any) => {
 
 if (module.hot) {
   module.hot.accept("./components/App", () => {
-    const newApp = require("./components/App").default;
+    const newApp = require("./components/App").RootComponent;
 
-    render(RootComponent);
+    render(newApp);
   });
 }
 
