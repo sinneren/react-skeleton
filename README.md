@@ -29,4 +29,5 @@ yarn build
 ```
 Output will be in `/dist/` as bundled and uglified/minified JS.
 The `index.html` will be generated through the HTML-Webpack-Plugin with the `sr/index.html` as template.
+
 ----
