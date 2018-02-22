@@ -5,7 +5,7 @@ import { rootReducer } from "../reducers";
 declare const __DEV__: boolean;
 
 // STORE CONFIGURATIONS
-const storeEnhancers: any[] = [];
+const storeEnhancers: any = [];
 const middlewares: any = [];
 
 // apply middlewares
