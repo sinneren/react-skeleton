@@ -1,5 +1,8 @@
+import { IReduxAction } from "../interfaces";
+import { IAppState } from "./interfaces";
+
 const initial: IAppState = {
-    appTitle: "REACT + TYPESCRIPT + HMR + REDUX",
+    appTitle: "React Boilerplate",
 };
 
 function AppReducer(state = initial, action: IReduxAction = {type: "", payload: null}) {

@@ -1,16 +1,17 @@
 # Simple React 16 Boilerplate
 ## Specs
-- **React 16**
-- **Typescript** 2.6.2
-  - Awesome Typescript Loader ^3.4.1
-- **TSLint** 5.8.0
-  - basic React linting
+- **React 16.4.1**
+- **Typescript** 2.9.2
+  - Awesome Typescript Loader 5.2.0
+- **TSLint** 5.10.0
 - **SASS-Loader**
   - CSS-Modules and PostCSS
 - **HMR**
-  - React-Hot-Loader 3.1.3
+  - React-Hot-Loader 4.3.3
 - **Redux**
-  - React-Redux 5.0.6 & HMR Support
+  - React-Redux 5.0.7
+- **Routing**
+  - React-Router-Redux 5.0.0-alpha.9
 
 ## Installation
 

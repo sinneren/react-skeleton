@@ -1,9 +1,7 @@
 import { AppReducer } from "./AppReducer";
 
-const { combineReducers }: any = require("redux");
-
-const rootReducer = combineReducers({
+const rootReducer = {
     appState: AppReducer,
-});
+};
 
 export {rootReducer};
