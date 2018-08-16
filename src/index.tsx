@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { AppContainer } from "./components/App";
+import { AppContainer } from "./ui/AppContainer";
 import configureStore from "./redux/store";
 
 // GLOBAL STYLES

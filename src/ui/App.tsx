@@ -1,10 +1,8 @@
 import * as React from "react";
 import { ConnectedRouter } from "react-router-redux";
 import { Route, Switch } from "react-router";
-import { HelloWorld } from "../HelloWorld/HelloWorld";
-import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
-
-const styles = require("./App.scss");
+import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
+import { Home } from "./pages/Home/Home";
 
 interface IProps {
   history: any;
@@ -23,7 +21,7 @@ class App extends React.Component<IProps, any> {
       <ConnectedRouter history={history}>
         <ErrorBoundary>
           <Switch>
-            <Route path={"/"} component={HelloWorld} />
+            <Route path={"/"} component={Home} />
           </Switch>
         </ErrorBoundary>
       </ConnectedRouter>

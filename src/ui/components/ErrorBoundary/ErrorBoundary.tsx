@@ -6,12 +6,16 @@ import * as React from "react";
 
 const styles = require("./ErrorBoundary.scss");
 
+interface IProps {
+  children: JSX.Element;
+}
+
 interface IState {
   error: Error;
   info: React.ErrorInfo;
 }
 
-export class ErrorBoundary extends React.Component<null, IState> {
+export class ErrorBoundary extends React.Component<IProps, IState> {
   public state: IState = {
     error: null,
     info: null,
