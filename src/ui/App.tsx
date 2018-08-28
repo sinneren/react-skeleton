@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ConnectedRouter } from "react-router-redux";
+import { ConnectedRouter } from "connected-react-router";
 import { Route, Switch } from "react-router";
 import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
 import { Home } from "./pages/Home/Home";

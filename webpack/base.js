@@ -17,7 +17,11 @@ module.exports = {
 
   // files that should be resolved by webpack
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"]
+    extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
+    alias: {
+      scss: path.resolve(__dirname, "../src/assets/scss/"),
+      img: path.resolve(__dirname, "../src/assets/img/")
+    }
   },
 
   // the loaders
@@ -62,8 +66,8 @@ module.exports = {
       // FONT LOADER
       {
         test: /\.(ttf|svg)$/,
-        loader: "file-loader",
-      },
+        loader: "file-loader"
+      }
     ]
   },
 
@@ -74,7 +78,7 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
       __DEV__: process.env.NODE_ENV === "development"
-    }),
+    })
   ],
 
   // stats

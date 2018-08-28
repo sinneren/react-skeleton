@@ -1,0 +1,29 @@
+@import "scss/vars";
+
+.container {
+  background: white;
+
+  margin: $gutterLarge*3 auto;
+  padding: $gutterLarge;
+
+  max-width: 1200px;
+
+  box-shadow: $card-1;
+
+  .title {
+    font-size: 3em;
+    font-family: $display-font;
+  }
+
+  .description {
+    font-size: 1.4em;
+
+    p, ul {
+      color: $gray-dim;
+    }
+
+    ul li small {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware, compose, combineReducers } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import { rootReducer } from "../reducers";
 
-import createHistory from "history/createHashHistory";
-import { routerMiddleware, routerReducer } from "react-router-redux";
+import { createBrowserHistory } from "history";
+import { connectRouter, routerMiddleware } from "connected-react-router";
 
 /**
  * @author Rico Maier <rico.maier@etecture.de>
@@ -12,7 +12,7 @@ import { routerMiddleware, routerReducer } from "react-router-redux";
 declare const __DEV__: boolean;
 
 // BROWSER HISTORY
-const history = createHistory();
+const history = createBrowserHistory();
 
 // STORE CONFIGURATIONS
 const storeEnhancers: any = [];
@@ -30,15 +30,16 @@ storeEnhancers.push(applyMiddleware(...middlewares));
 
 // add dev-tools storeEnhancer
 if (__DEV__) {
-  const debugEnhancer =
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__();
-  storeEnhancers.push(debugEnhancer);
+  const reduxExtension = (window as any).__REDUX_DEVTOOLS_EXTENSION__;
+  if (reduxExtension) {
+    storeEnhancers.push(reduxExtension());
+  }
 }
 
 export default function configureStore(initialState: any) {
   // base store configuration
   const store = createStore(
-    combineReducers({ ...rootReducer, router: routerReducer }),
+    connectRouter(history)(rootReducer),
     initialState,
     compose(...storeEnhancers),
   );
