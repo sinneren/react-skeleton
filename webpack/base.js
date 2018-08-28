@@ -52,18 +52,17 @@ module.exports = {
         exclude: /node_modules/
       },
 
-      // COMPONENT SASS STYLES
+      // SASS STYLES
       {
         test: /\.scss$/,
         loaders: [
           "style-loader",
           { loader: "css-loader", options: { modules: true } },
-          "postcss-loader",
           "sass-loader"
         ]
       },
 
-      // FONT LOADER
+      // FILE LOADER
       {
         test: /\.(ttf|svg)$/,
         loader: "file-loader"
